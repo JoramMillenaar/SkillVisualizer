@@ -4,6 +4,7 @@ import Header from './components/Common/Header';
 import SkillList from './components/Skills/SkillList';
 import ExperienceList from './components/Experience/ExperienceList';
 import ImpactList from './components/Impacts/ImpactList';
+import ProjectList from './components/Projects/ProjectList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/skills" element={<SkillList />} />
             <Route path="/experience" element={<ExperienceList />} />
+            <Route path="/projects" element={<ProjectList />} />
             <Route path="/impacts" element={<ImpactList />} />
             <Route path="/" element={<SkillList />} /> {/* Default route */}
           </Routes>

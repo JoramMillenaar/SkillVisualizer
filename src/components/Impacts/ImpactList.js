@@ -8,20 +8,25 @@ function ImpactList() {
   const location = useLocation();
 
   useEffect(() => {
-    // Parse query parameters
     const params = new URLSearchParams(location.search);
     const skillId = params.get('skill');
+    const projectId = params.get('project');
+
+    let filteredImpacts = userData.impacts;
 
     if (skillId) {
-      // Filter impacts related to the specific skill
-      const filteredImpacts = userData.impacts.filter((impact) =>
+      filteredImpacts = filteredImpacts.filter((impact) =>
         impact.skills_involved.includes(skillId)
       );
-      setImpacts(filteredImpacts);
-    } else {
-      // Show all impacts
-      setImpacts(userData.impacts);
     }
+
+    if (projectId) {
+      filteredImpacts = filteredImpacts.filter((impact) =>
+        impact.projects_involved.includes(projectId)
+      );
+    }
+
+    setImpacts(filteredImpacts);
   }, [location.search]);
 
   return (

@@ -52,6 +52,28 @@
         "skills_involved": ["skill_2"],
         "projects_involved": ["project_2"]
       }
+    ],
+    "projects": [
+      {
+        "id": "project_1",
+        "name": "E-commerce Platform",
+        "description": "Developed a scalable e-commerce platform handling thousands of daily transactions.",
+        "skills_utilized": ["skill_1", "skill_3"],
+        "impacts_made": ["impact_1"],
+        "duration_months": 12,
+        "start_date": "2019-01-01",
+        "end_date": "2019-12-31"
+      },
+      {
+        "id": "project_2",
+        "name": "Real-time Analytics Dashboard",
+        "description": "Built a dashboard providing real-time analytics to business stakeholders.",
+        "skills_utilized": ["skill_1", "skill_2"],
+        "impacts_made": ["impact_2"],
+        "duration_months": 6,
+        "start_date": "2020-01-01",
+        "end_date": "2020-06-30"
+      }
     ]
   }
   

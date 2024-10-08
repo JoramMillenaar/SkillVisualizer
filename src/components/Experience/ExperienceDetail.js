@@ -2,7 +2,6 @@ import React from 'react';
 import { format } from 'date-fns';
 import userData from '../../data/userData.json';
 
-
 function ExperienceDetail({ experience }) {
   const startDate = new Date(experience.start_date);
   const endDate = experience.end_date ? new Date(experience.end_date) : 'Present';
@@ -29,6 +28,19 @@ function ExperienceDetail({ experience }) {
             return (
               <li key={skillId} className="px-2 py-1 bg-gray-200 rounded">
                 {skill ? skill.name : 'Unknown Skill'}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="mt-4">
+        <h4 className="font-semibold">Projects:</h4>
+        <ul className="flex space-x-2 mt-2">
+          {experience.projects.map((projectId) => {
+            const project = userData.projects.find((p) => p.id === projectId);
+            return (
+              <li key={projectId} className="px-2 py-1 bg-gray-200 rounded">
+                {project ? project.name : 'Unknown Project'}
               </li>
             );
           })}

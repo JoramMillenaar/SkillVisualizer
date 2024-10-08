@@ -10,12 +10,18 @@ function SkillDetail({ skill }) {
       <p className="mb-2">
         <strong>Proficiency:</strong> {skill.proficiency}
       </p>
-      <div className="mt-4">
+      <div className="mt-4 space-x-4">
         <a
           href={`/impacts?skill=${skill.id}`}
           className="text-blue-500 hover:underline"
         >
           View Related Impacts
+        </a>
+        <a
+          href={`/projects?skill=${skill.id}`}
+          className="text-blue-500 hover:underline"
+        >
+          View Related Projects
         </a>
       </div>
     </div>
