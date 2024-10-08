@@ -1,0 +1,57 @@
+{
+    "skills": [
+      {
+        "id": "skill_1",
+        "name": "JavaScript",
+        "experience": {
+          "years": 5,
+          "hours": 5000
+        },
+        "proficiency": "Expert",
+        "related_projects": ["project_1", "project_2"],
+        "related_impacts": ["impact_1", "impact_3"]
+      },
+      {
+        "id": "skill_2",
+        "name": "React",
+        "experience": {
+          "years": 3,
+          "hours": 3000
+        },
+        "proficiency": "Advanced",
+        "related_projects": ["project_2", "project_3"],
+        "related_impacts": ["impact_2"]
+      }
+    ],
+    "experience": [
+      {
+        "id": "job_1",
+        "company": "TechCorp",
+        "role": "Senior Developer",
+        "start_date": "2018-01-01",
+        "end_date": "2020-12-31",
+        "responsibilities": [
+          "Led a team of 5 developers.",
+          "Architected and implemented front-end solutions."
+        ],
+        "skills_used": ["skill_1", "skill_2"],
+        "projects": ["project_1", "project_2"],
+        "impacts": ["impact_1", "impact_2"]
+      }
+    ],
+    "impacts": [
+      {
+        "id": "impact_1",
+        "description": "Increased online sales by 30% through improved user experience.",
+        "skills_involved": ["skill_1", "skill_3"],
+        "projects_involved": ["project_1"]
+      },
+      {
+        "id": "impact_2",
+        "description": "Reduced data processing time by 50%, enhancing decision-making speed.",
+        "skills_involved": ["skill_2"],
+        "projects_involved": ["project_2"]
+      }
+    ]
+  }
+  

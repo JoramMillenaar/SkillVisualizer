@@ -6,18 +6,21 @@ import ExperienceList from './components/Experience/ExperienceList';
 import ImpactList from './components/Impacts/ImpactList';
 
 function App() {
-    return (
-        <Router>
-            <div>
-                <Header />
-                <Routes>
-                    <Route path="/skills" element={<SkillList />} />
-                    <Route path="/experience" element={<ExperienceList />} />
-                    <Route path="/impacts" element={<ImpactList />} />
-                </Routes>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/skills" element={<SkillList />} />
+            <Route path="/experience" element={<ExperienceList />} />
+            <Route path="/impacts" element={<ImpactList />} />
+            <Route path="/" element={<SkillList />} /> {/* Default route */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
