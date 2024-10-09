@@ -1,27 +1,31 @@
 import React from 'react';
+import SkillIcon from '../Common/SkillIcon';
 
 function SkillDetail({ skill }) {
   return (
-    <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
-      <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-      <p className="mb-2">
+    <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col">
+      <div className="flex items-center mb-4">
+        <SkillIcon skillId={skill.id} showName={false} />
+        <h3 className="text-xl font-semibold ml-2">{skill.name}</h3>
+      </div>
+      <p>
         <strong>Experience:</strong> {skill.experience.years} years
       </p>
-      <p className="mb-2">
+      <p>
         <strong>Proficiency:</strong> {skill.proficiency}
       </p>
-      <div className="mt-4 space-x-4">
+      <div className="mt-7 flex flex-wrap gap-3">
         <a
           href={`/impacts?skill=${skill.id}`}
-          className="text-blue-500 hover:underline"
+          className="px-2 py-1 bg-gray-200 rounded"
         >
-          View Related Impacts
+          Related Impacts
         </a>
         <a
           href={`/projects?skill=${skill.id}`}
-          className="text-blue-500 hover:underline"
+          className="px-2 py-1 bg-gray-200 rounded"
         >
-          View Related Projects
+          Related Projects
         </a>
       </div>
     </div>

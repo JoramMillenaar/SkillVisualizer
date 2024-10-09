@@ -1,6 +1,8 @@
 import React from 'react';
 import { format } from 'date-fns';
+import SkillIcon from '../Common/SkillIcon';
 import userData from '../../data/userData.json';
+
 
 function ProjectDetail({ project }) {
   const startDate = new Date(project.start_date);
@@ -29,15 +31,17 @@ function ProjectDetail({ project }) {
       </div>
       <div className="mt-4">
         <h4 className="font-semibold">Skills Utilized:</h4>
-        <ul className="flex space-x-2 mt-2">
-          {project.skills_utilized.map((skillId) => {
-            const skill = userData.skills.find((s) => s.id === skillId);
-            return (
-              <li key={skillId} className="px-2 py-1 bg-gray-200 rounded">
-                {skill ? skill.name : 'Unknown Skill'}
-              </li>
-            );
-          })}
+        <ul className="flex space-x-4 mt-2">
+          {project.skills_utilized.map((skillId) => (
+            <li key={skillId}>
+              <SkillIcon
+                skillId={skillId}
+                showName={false}
+                size="1.5em"
+                isClickable={true}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

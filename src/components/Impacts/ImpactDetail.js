@@ -1,5 +1,7 @@
 import React from 'react';
+import SkillIcon from '../Common/SkillIcon';
 import userData from '../../data/userData.json';
+
 
 function ImpactDetail({ impact }) {
   return (
@@ -7,15 +9,17 @@ function ImpactDetail({ impact }) {
       <p className="text-lg mb-4">{impact.description}</p>
       <div className="mt-4">
         <h4 className="font-semibold">Skills Involved:</h4>
-        <ul className="flex space-x-2 mt-2">
-          {impact.skills_involved.map((skillId) => {
-            const skill = userData.skills.find((s) => s.id === skillId);
-            return (
-              <li key={skillId} className="px-2 py-1 bg-gray-200 rounded">
-                {skill ? skill.name : 'Unknown Skill'}
-              </li>
-            );
-          })}
+        <ul className="flex space-x-4 mt-2">
+          {impact.skills_involved.map((skillId) => (
+            <li key={skillId}>
+              <SkillIcon
+                skillId={skillId}
+                showName={false}
+                size="1.5em"
+                isClickable={true}
+              />
+            </li>
+          ))}
         </ul>
       </div>
       <div className="mt-4">

@@ -8,6 +8,7 @@
           "hours": 5000
         },
         "proficiency": "Expert",
+        "type": "hard",
         "related_projects": ["project_1", "project_2"],
         "related_impacts": ["impact_1", "impact_3"]
       },
@@ -19,8 +20,21 @@
           "hours": 3000
         },
         "proficiency": "Advanced",
+        "type": "hard",
         "related_projects": ["project_2", "project_3"],
         "related_impacts": ["impact_2"]
+      },
+      {
+        "id": "skill_3",
+        "name": "Team Leadership",
+        "experience": {
+          "years": 2,
+          "hours": 2000
+        },
+        "proficiency": "Advanced",
+        "type": "soft",
+        "related_projects": ["project_1"],
+        "related_impacts": ["impact_1"]
       }
     ],
     "experience": [
