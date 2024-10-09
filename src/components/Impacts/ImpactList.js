@@ -16,7 +16,7 @@ function ImpactList() {
 
     if (skillId) {
       filteredImpacts = filteredImpacts.filter((impact) =>
-        impact.skills_involved.includes(skillId)
+        impact.skills.includes(skillId)
       );
     }
 

@@ -3,38 +3,35 @@
       {
         "id": "skill_1",
         "name": "JavaScript",
+        "icon": "FaJsSquare",
         "experience": {
           "years": 5,
           "hours": 5000
         },
         "proficiency": "Expert",
-        "type": "hard",
-        "related_projects": ["project_1", "project_2"],
-        "related_impacts": ["impact_1", "impact_3"]
+        "type": "hard"
       },
       {
         "id": "skill_2",
         "name": "React",
+        "icon": "FaReact",
         "experience": {
           "years": 3,
           "hours": 3000
         },
         "proficiency": "Advanced",
-        "type": "hard",
-        "related_projects": ["project_2", "project_3"],
-        "related_impacts": ["impact_2"]
+        "type": "hard"
       },
       {
         "id": "skill_3",
         "name": "Team Leadership",
+        "icon": "FaUsers",
         "experience": {
           "years": 2,
           "hours": 2000
         },
         "proficiency": "Advanced",
-        "type": "soft",
-        "related_projects": ["project_1"],
-        "related_impacts": ["impact_1"]
+        "type": "soft"
       }
     ],
     "experience": [
@@ -48,7 +45,7 @@
           "Led a team of 5 developers.",
           "Architected and implemented front-end solutions."
         ],
-        "skills_used": ["skill_1", "skill_2"],
+        "skills": ["skill_1", "skill_2"],
         "projects": ["project_1", "project_2"],
         "impacts": ["impact_1", "impact_2"]
       }
@@ -57,13 +54,13 @@
       {
         "id": "impact_1",
         "description": "Increased online sales by 30% through improved user experience.",
-        "skills_involved": ["skill_1", "skill_3"],
+        "skills": ["skill_1", "skill_3"],
         "projects_involved": ["project_1"]
       },
       {
         "id": "impact_2",
         "description": "Reduced data processing time by 50%, enhancing decision-making speed.",
-        "skills_involved": ["skill_2"],
+        "skills": ["skill_2"],
         "projects_involved": ["project_2"]
       }
     ],

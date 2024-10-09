@@ -26,7 +26,7 @@ function ExperienceDetail({ experience }) {
       <div className="mt-4">
         <h4 className="font-semibold">Skills Used:</h4>
         <ul className="flex space-x-4 mt-2">
-          {experience.skills_used.map((skillId) => (
+          {experience.skills.map((skillId) => (
             <li key={skillId}>
               <SkillIcon
                 skillId={skillId}

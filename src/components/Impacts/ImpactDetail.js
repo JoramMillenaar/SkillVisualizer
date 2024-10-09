@@ -10,7 +10,7 @@ function ImpactDetail({ impact }) {
       <div className="mt-4">
         <h4 className="font-semibold">Skills Involved:</h4>
         <ul className="flex space-x-4 mt-2">
-          {impact.skills_involved.map((skillId) => (
+          {impact.skills.map((skillId) => (
             <li key={skillId}>
               <SkillIcon
                 skillId={skillId}
