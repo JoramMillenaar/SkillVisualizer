@@ -10,12 +10,19 @@ function ProjectList() {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const skillId = params.get('skill');
+    const projectId = params.get('project');
 
     let filteredProjects = userData.projects;
 
     if (skillId) {
       filteredProjects = filteredProjects.filter((project) =>
         project.skills_utilized.includes(skillId)
+      );
+    }
+
+    if (projectId) {
+      filteredProjects = filteredProjects.filter((project) =>
+        project.id === projectId
       );
     }
 

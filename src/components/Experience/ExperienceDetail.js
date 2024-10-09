@@ -45,7 +45,11 @@ function ExperienceDetail({ experience }) {
             const project = userData.projects.find((p) => p.id === projectId);
             return (
               <li key={projectId} className="px-2 py-1 bg-gray-200 rounded">
-                {project ? project.name : 'Unknown Project'}
+                <a
+                  href={`/projects?project=${project.id}`}
+                >
+                  {project ? project.name : 'Unknown Project'}
+                </a>
               </li>
             );
           })}
