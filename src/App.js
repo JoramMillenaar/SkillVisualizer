@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Common/Header';
+import Footer from './components/Common/Footer';
 import SkillList from './components/Skills/SkillList';
 import ExperienceList from './components/Experience/ExperienceList';
 import ImpactList from './components/Impacts/ImpactList';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<SkillList />} /> {/* Default route */}
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
