@@ -18,11 +18,25 @@ function ExperienceDetail({ experience }) {
         {format(startDate, 'MMM yyyy')} -{' '}
         {endDate === 'Present' ? 'Present' : format(endDate, 'MMM yyyy')}
       </p>
+      <h4 className='font-bold'>Responsibilities</h4>
       <ul className="list-disc list-inside mb-4">
         {experience.responsibilities.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
+      {experience.impacts && experience.impacts.length > 0 && (
+        <>
+          <h4 className='font-bold'>Impact</h4>
+          <ul className="list-disc list-inside mb-4">
+            {experience.impacts.map((item, index) => {
+              const impact = userData.impacts.find((i) => i.id === item);
+              return (
+                <li key={index}>{impact ? impact.description : 'Unknown Impact'}</li>
+              );
+            })}
+          </ul>
+        </>
+      )}
       <div className="mt-4">
         <h4 className="font-semibold">Skills Used:</h4>
         <ul className="flex space-x-4 mt-2">
@@ -38,23 +52,27 @@ function ExperienceDetail({ experience }) {
           ))}
         </ul>
       </div>
-      <div className="mt-4">
-        <h4 className="font-semibold">Projects:</h4>
-        <ul className="flex space-x-2 mt-2">
-          {experience.projects.map((projectId) => {
-            const project = userData.projects.find((p) => p.id === projectId);
-            return (
-              <li key={projectId} className="px-2 py-1 bg-gray-200 rounded">
-                <a
-                  href={`/projects?project=${project.id}`}
-                >
-                  {project ? project.name : 'Unknown Project'}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      {experience.projects && experience.projects.length > 0 && (
+        <>
+          <div className="mt-4">
+            <h4 className="font-semibold">Projects:</h4>
+            <ul className="flex space-x-2 mt-2">
+              {experience.projects.map((projectId) => {
+                const project = userData.projects.find((p) => p.id === projectId);
+                return (
+                  <li key={projectId} className="px-2 py-1 bg-gray-200 rounded">
+                    <a
+                      href={`/projects?project=${project.id}`}
+                    >
+                      {project ? project.name : 'Unknown Project'}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 }
